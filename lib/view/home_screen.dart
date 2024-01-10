@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:interview_task/bloc/home_bloc/home_bloc.dart';
 import 'package:interview_task/utiles/extension.dart';
 import 'package:interview_task/view/component/item_division.dart';
+import 'package:interview_task/view/search_screen/search_screen.dart';
 
 import '../bloc/home_bloc/home_state.dart';
 
@@ -32,6 +34,10 @@ class HomeScreen extends StatelessWidget {
                     margin: EdgeInsets.only(top: 6.hp),
                     height: 6.hp,
                     child: TextField(
+                      readOnly: true,
+                      onTap: () {
+                        Get.to(() => const SearchScreen());
+                      },
                       decoration: InputDecoration(
                         enabledBorder: const OutlineInputBorder(
                           borderSide:
