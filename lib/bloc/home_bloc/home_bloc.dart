@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_task/model/home_model.dart';
-import '../../service/service.dart';
+import 'package:interview_task/service/home_service.dart';
 import 'home_state.dart';
 part 'home_event.dart';
 
