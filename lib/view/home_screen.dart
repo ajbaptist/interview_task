@@ -28,10 +28,10 @@ class HomeScreen extends StatelessWidget {
               length: 5,
               child: Scaffold(
                   body: Container(
-                margin: EdgeInsets.symmetric(horizontal: 3.wp),
+                margin: EdgeInsets.symmetric(horizontal: 3.2.wp),
                 child: Column(children: [
                   Container(
-                    margin: EdgeInsets.only(top: 6.hp),
+                    margin: EdgeInsets.only(top: 6.hp, bottom: 2.hp),
                     height: 6.hp,
                     child: TextField(
                       readOnly: true,
@@ -54,6 +54,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const TabBar(
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    tabAlignment: TabAlignment.center,
+                    isScrollable: true,
+                    indicatorWeight: 2,
+                    labelColor: Colors.black,
                     tabs: [
                       Tab(text: "All"),
                       Tab(
@@ -71,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                         )
                       : state.status.isSucess && state.data.length >= 5
                           ? SizedBox(
-                              height: 82.hp,
+                              height: 80.hp,
                               child: TabBarView(
                                 children: [
                                   ItemDivision(data: state.data[0].subData),
